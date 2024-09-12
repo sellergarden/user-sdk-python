@@ -48,6 +48,20 @@ class DigikalaSellerAPI(Injectable):
         )
         return {"success": True}
 
+    def GetOrders(self, from_date, to_date):
+        print(f"Fetching orders from {from_date} to {to_date}")
+        return [
+            {"id": 1, "name": "Order 1", "products": [1, 2], "total_price": 100},
+            {"id": 2, "name": "Order 2", "products": [2], "total_price": 50},
+        ]
+
+    def GetProducts(self, from_date, to_date):
+        print(f"Fetching products from {from_date} to {to_date}")
+        return [
+            {"id": 1, "name": "Product 1"},
+            {"id": 2, "name": "Product 2"},
+        ]
+
 
 class AppKVStore(Injectable):
     """ """
